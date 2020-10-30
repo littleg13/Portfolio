@@ -1,11 +1,8 @@
 let skills = [];
 let currentActiveSkill = 1;
 let skillsCarousel;
-let height, width;
 window.onload = (event) => {
     skillsCarousel = document.getElementById("skillsCarousel");
-    height = skillsCarousel.clientHeight;
-    width = skillsCarousel.clientWidth;
     skills = Array.from(document.getElementsByClassName("skill"));
 };
 

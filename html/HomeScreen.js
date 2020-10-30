@@ -28,7 +28,6 @@ function main() {
     gl = canvas.getContext("webgl2");
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.ONE, gl.ONE);
-    gl.enable(gl.VERTEX_PROGRAM_POINT_SIZE);
     // Only continue if WebGL is available and working
     if (gl === null) {
       alert("Unable to initialize WebGL. Your browser or machine may not support it.");

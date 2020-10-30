@@ -32,9 +32,8 @@ a:hover {
 
 .skill {
     height: 16rem;
-    width: 25%;
-    margin: 0px;
-    left: 0px;
+    width: 25%; 
+
     position: absolute;
     top: 4rem;
     transition: all 0.5s;
@@ -94,10 +93,11 @@ a:hover {
     background-color: rgba(237, 237, 237, 0.9);
     --text-color: var(--text-dark);
     color: var(--text-color);
-    margin: 1rem;
     margin-top: 3rem;
     padding-top: 0.75rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    max-width: 1440px;
 }
 
 .section-odd {
@@ -118,8 +118,41 @@ a:hover {
 .sectionContent {
     display: flex;
     justify-content: center;
-    padding: 4rem;
     padding-top: 1rem;
+    width: 100%;
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionContent {
+        flex-direction: column;
+    }
+
+    #skillContent {
+        flex-direction: row;
+    }
+
+    .skill {
+        width: 100%;
+        left: 0%;
+    }
+
+    .skill-right {
+        left: 0%;
+        z-index: 0;
+    }
+
+    .skill-left {
+        left: 0%;
+        z-index: 0;
+    }
+
+    .skill-inactive {
+        left: 0%;
+    }
+
 }
 
 .projectContent > img {
@@ -129,12 +162,11 @@ a:hover {
 }
 
 #sections {
-    padding: 10%;
     padding-top: 0.5rem;
     display: flex;
     flex-direction: column;
     background-color: var(--shadow-rgba);
-    box-shadow: inset 0px 5rem 5rem #0f1018;
+    box-shadow: inset 0px 5rem 5rem #000000;
 }
 
 #portrait {
@@ -144,11 +176,23 @@ a:hover {
     object-fit: cover;
     object-position: 50% 35%;
     border: 2px var(--primary-color) solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #aboutMeContent {
-    margin: 4rem;
     margin-top: 0rem;
+}
+
+#aboutMeWords {
+    width: 100%;
+    max-width: 900px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#aboutMeWords > h4 {
+    margin-top: 1rem;
 }
 
 #skills {
@@ -181,12 +225,15 @@ a:hover {
 #skillsCarouselBlock {
     width: 80%;
     max-width: 700px;
+    position: relative;
 }
 
 #navbar {
     justify-content: flex-end;
-    margin: auto;
-    width: 66vw;
+    right: 1rem;
+    width: 100%;
+    max-width: 1440px;
+    position: absolute;
     height: 4%;
     z-index: 2;
 }
@@ -194,7 +241,6 @@ a:hover {
 #home {
     color: var(--text-light);
     height: 96vh;
-    background-color: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
