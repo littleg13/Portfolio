@@ -1,0 +1,248 @@
+body {
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    background-image: url("background1.png");
+    background-attachment: fixed;
+    background-size: auto auto;
+    background-position: 0% 0%;
+    background-color: var(--primary-shadow);
+    font-weight: 500;
+    
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-width:100%;
+}
+
+a {
+    color: var(--text-light);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+.skill {
+    height: 16rem;
+    width: 25%;
+    margin: 0px;
+    left: 0px;
+    position: absolute;
+    top: 4rem;
+    transition: all 0.5s;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-dark);
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: inset 0 0 50px #888888, 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.5);
+}
+
+.skillHeader {
+    box-shadow: 0px 2px var(--primary-color);
+    font-size: 2.0em;
+}
+
+.skillContent {
+    font-size: 1em;
+    font-weight: 500;
+    flex:1;
+}
+
+.skill-active {
+    height: 22rem;
+    width: 45%;
+    z-index: 3;
+    left: 27.5%;
+    top: 1rem;
+}
+
+.skill-inactive {
+    left: 37.5%;
+    z-index: 0;
+    font-size: 0.4rem;
+}
+
+.skill-right {
+    left: 0%;
+    font-size: 0.4rem;
+    z-index: 2;
+}
+
+.skill-left {
+    left: 75%;
+    font-size: 0.4rem;
+    z-index: 1;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(237, 237, 237, 0.9);
+    --text-color: var(--text-dark);
+    color: var(--text-color);
+    margin: 1rem;
+    margin-top: 3rem;
+    padding-top: 0.75rem;
+    padding-bottom: 2rem;
+}
+
+.section-odd {
+    --text-color: var(--text-light);
+    background-color: var(--bg-dark);
+}
+
+.sectionHeader {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    box-shadow: 0px 2px var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.sectionContent {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    padding-top: 1rem;
+}
+
+.projectContent > img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+#sections {
+    padding: 10%;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--shadow-rgba);
+    box-shadow: inset 0px 5rem 5rem #0f1018;
+}
+
+#portrait {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    border: 2px var(--primary-color) solid;
+}
+
+#aboutMeContent {
+    margin: 4rem;
+    margin-top: 0rem;
+}
+
+#skills {
+    background-color: var(--bg-dark);
+}
+
+#skillContent > button {
+    color: var(--primary-color);
+    border: none;
+    width: 10%;
+    background: none;
+    height: 24rem;
+}
+
+#skillContent > button:hover {
+    font-size: 1.4rem;
+}
+#skillContent > button:focus {
+    outline: none;
+}
+
+#skillsCarousel {
+    display: block;
+    position: absolute;
+    height: 24rem;
+    width: calc((80% - 2rem) * 0.80);
+    max-width: 700px;
+}
+
+#skillsCarouselBlock {
+    width: 80%;
+    max-width: 700px;
+}
+
+#navbar {
+    justify-content: flex-end;
+    margin: auto;
+    width: 66vw;
+    height: 4%;
+    z-index: 2;
+}
+
+#home {
+    color: var(--text-light);
+    height: 96vh;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.centerBox {
+    display: flex;
+    justify-content: center;
+}
+
+.toFrontLabel {
+    z-index: 2;
+    display: inline-block;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(33.33%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-33.33%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+:root {
+    --text-light:#ffffff;
+    --text-color: var(--text-light);
+    --text-dark: #424242;
+    --link-hover: blue;
+    --bg-color: #ffffff;
+    --bg-dark: rgba(15, 16, 23, 0.7);
+    --primary-color:#007CC7;
+    --section-bg: rgba(0, 124, 199, 0.7); 
+    --secondary-color: #12232E;
+    --shadow-rgba: rgba(32, 54, 71, 0.7);
+    --accent-color: #4DA8DA;
+    --primary-shadow: #203647;
+    --secondary-shadow: #EEFBFB;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
