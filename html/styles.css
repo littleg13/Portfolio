@@ -9,7 +9,7 @@ body {
     background-position: 0% 0%;
     background-color: var(--primary-shadow);
     font-weight: 500;
-    
+    overflow-x:hidden
 }
 
 canvas {
@@ -19,7 +19,6 @@ canvas {
     position: absolute;
     left: 0px;
     top: 0px;
-    max-width:100%;
 }
 
 a {
