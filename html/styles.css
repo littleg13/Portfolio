@@ -22,11 +22,11 @@ canvas {
 }
 
 a {
-    color: var(--text-light);
+    color: var(--text-color);
 }
 
 a:hover {
-    color: var(--link-hover);
+    color: var(--primary-color);
 }
 
 .skill {
@@ -55,7 +55,16 @@ a:hover {
 .skillContent {
     font-size: 1em;
     font-weight: 500;
+    padding: 5%;
     flex:1;
+}
+
+.skillContent > ul {
+    padding-left: 10%;
+}
+
+.skillContent > ul > li {
+    text-align: start;
 }
 
 .skill-active {
@@ -154,10 +163,153 @@ a:hover {
 
 }
 
-.projectContent > img {
+.project-collapsed > .projectContent {
+    display: none;
+}
+
+.project-collapsed > .projectPreview {
+    display: block;
+}
+
+.project-collapsed > .closeButton {
+    display: none;
+}
+
+.closeButton {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border: none;
+    background: none;
+}
+
+.closeButton:hover {
+    box-shadow: inset 0 0 50px #888888;
+}
+
+.closeButton:focus {
+    outline: none;
+}
+
+.projectPreview {
+    display: none;
     width: 10rem;
     height: 10rem;
     object-fit: cover;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#projectsContent {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.project {
+    width: 100%;
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.5);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    transition: all 0.5s;
+    position: relative;
+    flex-grow: 2;
+}
+
+.project-collapsed {
+    width: 15rem;
+    flex-grow: 0;
+}
+.project-collapsed:hover {
+    box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.5);
+    cursor: pointer;
+}
+
+.projectHeader {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projectCat {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.projectContent {
+    padding-top: 1rem;
+}
+
+.galleryHeader {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.projectContentGallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.titleImgBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px;
+    width: 10rem;
+    
+    transition: all 0.5s;
+}
+
+.titleImgBox > img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    margin: auto;
+}
+
+.titleImgBox > span {
+    visibility: hidden;
+}
+
+.titleImgBox:hover {
+    width: 12rem;
+    /* height: 12rem; */
+    box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.5);
+}
+
+.titleImgBox:hover > span {
+    visibility: visible;
+}
+
+.githubLink {
+    display: inline-block;
+    box-shadow: 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.5);
+    padding: 0.25rem;
+    border-radius: 5px;
+}
+
+.githubLink:hover {
+    display: inline-block;
+    box-shadow: 1px 1px 1px 1px rgba(0.1, 0.1, 0.1, 0.5);
+    padding: 0.25rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.githubLink > i {
+    color: var(--primary-color);
 }
 
 #sections {
@@ -256,31 +408,60 @@ a:hover {
     display: inline-block;
 }
 
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
-  transform: translateX(33.33%);
+.documentPreview {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    padding: 1rem;
+    background-color: var(--section-bg);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.5);
+    margin: auto;
+    text-align: center;
+    --text-color: var(--text-dark);
+    color: var(--text-color);
+    transition: all 0.5s;
 }
 
-.carousel-inner .carousel-item-left.active, 
-.carousel-inner .carousel-item-prev {
-  transform: translateX(-33.33%)
+.documentPreview:hover {
+    box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.7);
+    width: 400px;
+    cursor: pointer;
 }
 
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
+.documentPreview > img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    margin-bottom: 1rem;
 }
 
+#resumeContent {
+    min-height: 26rem;
+}
+
+#resume {
+    width: 100%;
+    max-width: 1340px;
+    height: 71rem;
+}
+
+.hidden {
+    display: none;
+}
 
 :root {
     --text-light:#ffffff;
     --text-color: var(--text-light);
     --text-dark: #424242;
+    --text-muted: #6c757d;
     --link-hover: blue;
     --bg-color: #ffffff;
     --bg-dark: rgba(15, 16, 23, 0.7);
     --primary-color:#007CC7;
-    --section-bg: rgba(0, 124, 199, 0.7); 
+    --section-bg: rgba(237, 237, 237, 0.9); 
     --secondary-color: #12232E;
     --shadow-rgba: rgba(32, 54, 71, 0.7);
     --accent-color: #4DA8DA;
