@@ -9,7 +9,6 @@ window.onload = (event) => {
     skills = Array.from(document.getElementsByClassName("skill"));
     for(let i=0;i<skills.length;i++){
         let node = document.createElement("i");
-        node.className = "fas fa-circle";
         indicators.push(node);
         skillIndicator.prepend(node);
     }
