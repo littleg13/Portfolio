@@ -94,6 +94,22 @@ a:hover {
     z-index: 1;
 }
 
+#skillIndicator {
+    display: flex;
+    justify-content: center;
+    font-size: 0.5rem;
+    color: var(--text-muted);
+}
+
+#skillIndicator > * {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
+.indicator-active {
+    color: var(--text-light);
+}
+
 
 .section {
     display: flex;
