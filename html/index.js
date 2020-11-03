@@ -56,11 +56,3 @@ function closeProject(event) {
     event.currentTarget.parentNode.classList.add("project-collapsed");
     event.stopPropagation();
 }
-
-function showResume(preview) {
-    preview.classList.add("hidden");
-    let resume = document.getElementById("resume");
-    resume.classList.remove("hidden");
-    resume.width = resume.clientWidth;
-
-}

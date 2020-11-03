@@ -27,12 +27,12 @@ a {
 
 a:hover {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 .skill {
     height: 16rem;
     width: 25%; 
-
     position: absolute;
     top: 4rem;
     transition: all 0.5s;
@@ -41,7 +41,8 @@ a:hover {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-    color: var(--text-dark);
+    --text-color: var(--text-dark);
+    color: var(--text-color);
     background-color: var(--bg-color);
     border-radius: 5px;
     box-shadow: inset 0 0 50px #888888, 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.5);
@@ -247,6 +248,10 @@ a:hover {
     padding-top: 1rem;
 }
 
+.inlineLink {
+    color: var(--primary-color);
+}
+
 .galleryHeader {
     font-size: 1.5em;
     font-weight: 700;
@@ -427,7 +432,6 @@ a:hover {
 .documentPreview:hover {
     box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.7);
     width: 400px;
-    cursor: pointer;
 }
 
 .documentPreview > img {
@@ -439,17 +443,47 @@ a:hover {
 }
 
 #resumeContent {
-    min-height: 26rem;
-}
-
-#resume {
-    width: 100%;
-    max-width: 1340px;
-    height: 71rem;
+    min-height: 25rem;
 }
 
 .hidden {
     display: none;
+}
+
+#contactMessage {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+#contactForm {
+    width: 100%;
+}
+
+#contactForm > input{
+    border: none;
+    margin-bottom: 1rem;
+}
+
+#nameForm {
+    margin-right: 1rem;
+}
+
+#emailForm {
+    width: 100%;
+    max-width: 25rem;
+}
+
+#messageForm {
+    width: 100%;
+    border: none;
+}
+
+#sendButton {
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: var(--text-light);
 }
 
 :root {
