@@ -3,7 +3,7 @@ let indicators = [];
 let currentActiveSkill = 1;
 let skillsCarousel;
 let skillIndicator;
-window.onload = (event) => {
+function initSkills() {
     skillsCarousel = document.getElementById("skillsCarousel");
     skillIndicator = document.getElementById("skillIndicator");
     skills = Array.from(document.getElementsByClassName("skill"));
