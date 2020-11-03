@@ -31,10 +31,11 @@ a:hover {
 }
 
 .skill {
-    height: 16rem;
+    height: 13.33rem;
     width: 25%; 
     position: absolute;
-    top: 4rem;
+    left: 37.5%;
+    top: 5.33rem;
     transition: all 0.5s;
     text-align: center;
     padding: 1rem;
@@ -46,18 +47,17 @@ a:hover {
     background-color: var(--bg-color);
     border-radius: 5px;
     box-shadow: inset 0 0 50px #888888, 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.5);
+    font-size: 0.5555rem;
 }
 
 .skillHeader {
-    box-shadow: 0px 2px var(--primary-color);
-    font-size: 2.0em;
+    border-bottom: 1px solid var(--primary-color);
+    font-size: 2.4em;
 }
 
 .skillContent {
-    font-size: 1em;
     font-weight: 500;
     padding: 5%;
-    flex:1;
 }
 
 .skillContent > ul {
@@ -69,28 +69,21 @@ a:hover {
 }
 
 .skill-active {
-    height: 22rem;
-    width: 45%;
+    transform: scale(1.8);
     z-index: 3;
-    left: 27.5%;
-    top: 1rem;
 }
 
 .skill-inactive {
-    left: 37.5%;
     z-index: 0;
-    font-size: 0.4rem;
 }
 
 .skill-right {
     left: 0%;
-    font-size: 0.4rem;
     z-index: 2;
 }
 
 .skill-left {
     left: 75%;
-    font-size: 0.4rem;
     z-index: 1;
 }
 
@@ -98,6 +91,7 @@ a:hover {
     display: flex;
     justify-content: center;
     font-size: 0.5rem;
+    margin-top: 1rem;
 }
 
 .indicator-active {
@@ -164,22 +158,18 @@ a:hover {
     }
 
     .skill {
-        width: 100%;
-        left: 0%;
+        width: 55.55%;
+        left: 22.225%;
     }
 
     .skill-right {
-        left: 0%;
+        left: 22.225%;
         z-index: 0;
     }
 
     .skill-left {
-        left: 0%;
+        left: 22.225%;
         z-index: 0;
-    }
-
-    .skill-inactive {
-        left: 0%;
     }
 
 }
@@ -388,14 +378,6 @@ a:hover {
 }
 #skillContent > button:focus {
     outline: none;
-}
-
-#skillsCarousel {
-    display: block;
-    position: absolute;
-    height: 24rem;
-    width: calc((80% - 2rem) * 0.80);
-    max-width: 700px;
 }
 
 #skillsCarouselBlock {
