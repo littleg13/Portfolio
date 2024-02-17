@@ -41,7 +41,7 @@
             <!-- This section will be an about me and have a picture of myself. -->
             <div class="sectionHeader">About Me</div>
             <div id="aboutMeContent" class="sectionContent">
-                <img id="portrait" class="img-fluid" src="Grady.jpg">
+                <img id="portrait" class="img-fluid" src="images/Grady.jpg">
                 <div id="aboutMeWords">
                     <h4>Computer Science</h4>
                     I'm a software engineer currently working at Red Lens Games on contract with Microsoft. 
@@ -73,7 +73,7 @@
                         <li>Fluid Simulation</li>
                     </ul></div>
                 </div>
-                <div class="skill skill-inactive">
+                <div class="skill skill-right">
                     <div class="skillHeader">HTML/CSS/JS</div>
                     <div class="skillContent"><ul>
                         <li>Personal Portfolio Website</li>
@@ -124,7 +124,7 @@
                 <div id="TwitchOverlay" class="project">
                     <div class="projectHeader">Twitch Overlay</div>
                     <div class="projectCat">Computer Graphics</div>
-                    <img src="TwitchOverlay.gif" class="projectPreview">
+                    <img src="images/TwitchOverlay.gif" class="projectPreview">
                     <!-- <button class="closeButton"><i class="fas fa-times"></i></button> -->
                     <div class="projectContent">
                         The goal of this project was to use my knowledge of computer graphics to improve my Twitch stream quality. It is implemented as an OpenGl rendered scene that is updated by information gathered by from Twitch. The focus of the scene is a Phong lit mesh particle system, updated every frame by a single compute shader pass. Each follower or subscriber to the channel gets their own individual particle, which they can customize. They can use Twitch chat and soon to be a Twitch extension to change the speed, size, color, and shape of their particle. This is done in real time by communicating with the Twitch API using HTTP/Websocket protocols. All networking code was written from the socket layer without the use of any non-native libraries.
@@ -142,7 +142,7 @@
                 <div id="Mooxter" class="project">
                     <div class="projectHeader">Mooxter</div>
                     <div class="projectCat">HackKU 2020</div>
-                    <img src="TwitchOverlay.gif" class="projectPreview">
+                    <img src="images/TwitchOverlay.gif" class="projectPreview">
                     <!-- <button class="closeButton"><i class="fas fa-times"></i></button> -->
                     <div class="projectContent">
                         Mooxter connects with a variety of different services to allow peer to peer XPR transfer on multiple different platforms. Currently implemented is a web UI, along with a Discord bot to allow users to transfer funds. The system was built on a Kubernetes network to allow for scalability and reliability. This project was completed in a 48 hour period for KU's annual hackathon, HackKU. Mooxter won first place in Fintech, one of the two major groups of the competition. The project can be seen on Devpost <a class="inlineLink" href="https://devpost.com/software/mooxter-v2a8tc">here.</a>
@@ -157,7 +157,7 @@
                 <div id="FluidSim" class="project">
                     <div class="projectHeader">Fluid Sim</div>
                     <div class="projectCat">Computer Graphics</div>
-                    <img src="TwitchOverlay.gif" class="projectPreview">
+                    <img src="images/TwitchOverlay.gif" class="projectPreview">
                     <!-- <button class="closeButton"><i class="fas fa-times"></i></button> -->
                     <div class="projectContent">
                         Culminating from an interest in GPU simulated particles, I tried to design a 2D fluid simulation system written with OpenGL compute shaders. This simulation was effectively applying an addition compute shader pass to a GPU-based particle system, similar to the one at the top of this page. Spatial hashing was needed for optimization, since each particle was really only effected by its surrounding neighbors. If this was not used, each physics update would be O(n) per particle. The physics update pass calculated the new positions of each particle and updated their location in the hash table. These new positions were calculated based on the SPH equations. In the scene, each particle is rendered as a single point and color is derived from the forces acting on the particle.
@@ -173,7 +173,7 @@
         <div id="documents" class="container-fluid section section-odd">
             <div class="sectionHeader">Resume</div>
             <div id="resumeContent" class="sectionContent">
-                <a href="../professional_resume/Grady_Wright_Resume.pdf" target="_blank">
+                <a href="files/Grady_Wright_Resume.pdf" target="_blank">
                 <div class="documentPreview">
                     <img src="images/ResumePreview.png"/>
                     <div>Grady Wright Resume</div>
