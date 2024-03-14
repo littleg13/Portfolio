@@ -108,7 +108,7 @@
                 <div class="skill skill-inactive">
                     <div class="skillHeader">Unreal Engine</div>
                     <div class="skillContent"><ul>
-                        <li>TBA</li>
+                        <li><a href="#SkewCoordinateVoxel">Skewed Coordinate Voxel System</a></li>
                     </ul></div>
                 </div>
                 
@@ -137,6 +137,22 @@
                             <div class="titleImgBox"><img src="images/1000Particles.png" loading="lazy"><span class="caption">1000 Particles</span></div>
                         </div>
                         <a class="githubLink" href="https://github.com/littleg13/TwitchNotifier">Github Repo <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div id="SkewCoordinateVoxel" class="project">
+                    <div class="projectHeader">Skew Coordinate Voxel System in UE5</div>
+                    <div class="projectCat">Computer Graphics/Unreal Engine 5</div>
+                    <div class="projectContent">
+                        I created a system to voxelize and render an arbitrary polygonal mesh in Unreal Engine 5 based on a non-orthogonal skewed coordinate system. This meant that each voxel was a rhombic prism instead of a cube. This system was built in two parts. 
+                        The first being an algorithm I wrote to voxelize an arbitrary polygonal mesh in this skewed coordinate system and save the filled voxel positions to a texture on disk. This step also recorded the closest bone to each voxel to apply any boned animations, if voxelizing a skeletal mesh.
+                        The second part was a system to render these voxels. This was built on top of Unreal's Niagara particle system to render a mesh particle for each voxel. A few compute shaders were written to read the postitions texture and apply any necessary transforms, such as interpolating between positions for movement or applying bone transforms for skeletal meshes.
+                        This data was then piped directly to Niagara's shaders without the need for a CPU readback.
+                        <div class="galleryHeader">Gallery</div>
+                        <div class="projectContentGallery">
+                            <div class="titleImgBox"><img src="images/VoxelFullAnimation.gif" loading="lazy"><span class="caption">Animating skeletal mesh</span></div>
+                            <div class="titleImgBox"><img src="images/VoxelTooManyVoxels.gif" loading="lazy"><span class="caption">Thousands of voxels</span></div>
+                            <div class="titleImgBox"><img src="images/VoxelWhoNeedsWings.gif" loading="lazy"><span class="caption">Skeletal and static meshes</span></div>
+                        </div>
                     </div>
                 </div>
                 <div id="Mooxter" class="project">
