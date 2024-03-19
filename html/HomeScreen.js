@@ -7,7 +7,7 @@ let modelViewMatrix;
 let gl;
 let shaderProgramDraw;
 let shaderProgramUpdate;
-let numPoints = 1000000;
+let numPoints = 200000;
 let buffers;
 let ldsMousePos, ecMousePos;
 let canvas;
